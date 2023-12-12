@@ -1,6 +1,26 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useEffect } from 'react';
+import axios from 'axios';
 
 export default function Welcome() {
+  // make an api call to jsonplaceholder
+
+  useEffect(() => {
+    // Create a function to API call
+    const fetchTodo = async () => {
+      try {
+        const resp = await axios.get(
+          'https://jsonplaceholder.typicode.com/todos/1'
+        );
+        console.log(resp.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    // Call the function
+    fetchTodo();
+  }, []);
+
   return (
     <section className='welcome'>
       <div className='container'>
