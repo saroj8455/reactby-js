@@ -30,3 +30,36 @@ You may also see any lint errors in the console.
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.min.css';
 ```
+
+## Configure React router correct way
+
+```javascript
+// index.js,index.tsx,main.jsx
+// ... code
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+```
+
+```javascript
+// App.js
+import { Routes, Route } from 'react-router-dom';
+<Routes>
+  <Route path='/' element={<Welcome />} />
+  <Route path='/home' element={<Home />} />
+  <Route path='/about' element={<About />} />
+</Routes>;
+```
+
+```javascript
+// Navbar.js
+// ....code
+import { Link } from 'react-router-dom';
+<Link to='/' className='navbar-brand'>
+  Navbar
+</Link>;
+```
