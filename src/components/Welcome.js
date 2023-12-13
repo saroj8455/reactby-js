@@ -4,7 +4,6 @@ import axios from 'axios';
 
 export default function Welcome() {
   // make an api call to jsonplaceholder
-
   useEffect(() => {
     // Create a function to API call
     const fetchTodo = async () => {
@@ -13,6 +12,7 @@ export default function Welcome() {
           'https://jsonplaceholder.typicode.com/todos/1'
         );
         console.log(resp.data);
+        console.log(resp);
       } catch (error) {
         console.log(error);
       }
