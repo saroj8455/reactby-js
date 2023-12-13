@@ -34,9 +34,9 @@ export default function Navbar() {
               </Link>
             </li>
             <li className='nav-item'>
-              <a className='nav-link' href='link'>
-                Link
-              </a>
+              <Link to='/about' className='nav-link'>
+                About
+              </Link>
             </li>
             <li className='nav-item dropdown'>
               <a
